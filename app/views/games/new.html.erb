@@ -1,0 +1,23 @@
+<h1>New Game</h1>
+
+<div class="container">
+  <div class="row">
+    <div class="col"><%= @letters[0] %></div>
+    <div class="col"><%= @letters[1] %></div>
+    <div class="col"><%= @letters[2] %></div>
+    <div class="col"><%= @letters[3] %></div>
+    <div class="col"><%= @letters[4] %></div>
+    <div class="col"><%= @letters[5] %></div>
+    <div class="col"><%= @letters[6] %></div>
+    <div class="col"><%= @letters[7] %></div>
+    <div class="col"><%= @letters[8] %></div>
+    <div class="col"><%= @letters[9] %></div>
+  </div>
+</div>
+
+
+<form class="input-group mb-3" action="/score" method="post" data-turbo="false">
+  <input type="text" name="new" size="40" class="form-control">
+  <input class="btn btn-primary" type="submit" value="Submit!">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+</form>
